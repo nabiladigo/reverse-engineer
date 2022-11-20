@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head.ejs', {page: 'All artist'}) %>
+    <%- include ('../partials/nav.ejs') %>
+    <section class="hero is-medium has-background-light">
+        <div class="hero-body">
+            <p class="title">All artist</p>
+        </div>
+    </section>
+    
+    <main class="container is-max-widescreen">
+        <div class="columns is-multiline p-5">
+            <% for(let idx = 0; idx < artist.length; idx++){ %> 
+                <% const art= artist[idx] %>
+                
+                <div class="column is-one-third">
+                    <article class="card">
+                        <section class="card-image">
+                            <figure class="image is-3by3">
+                                <img src="<%= art.Image[2] %>" alt="Placeholder image" />
+                            </figure>
+                        </div>
+                    </section>
+                    <div class="card-content">
+                        <div class="content">
+                            <h3>
+                                <a href="/artist/<%= art._id %>"><%= art.Name %> </a>
+                            </h3>
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

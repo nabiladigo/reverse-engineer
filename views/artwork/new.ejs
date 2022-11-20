@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <%- include ('../partials/head.ejs', {page: 'New'}) %>
+    <%- include ('../partials/nav.ejs') %>
+        <section class="hero-is-medium has-background-light">
+            <div class="hero-body">
+                <h1 class="title">New Artwork</h1>
+            </div>
+        </section>
+            <form action="/artWorks" method="POST">
+                <div class="field">
+                    <label class="label">Artwork Name</label>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            placeholder="My new favorite artwork"
+                            name="name"
+                        />
+                    </div>
+                </div>
+        
+                <div class="field">
+                    <label class="label">Artwork Mediums</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Mediums" name="Mediums" />
+                    </div>
+                </div>
+        
+                <div class="field">
+                    <label class="label">Artwork Image</label>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            placeholder="http://"
+                            name="image"
+                        />
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-info">Create Artwork</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </body>
+</html>
